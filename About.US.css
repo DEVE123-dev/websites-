@@ -235,3 +235,41 @@ footer {
     color: #1d6e3b;
 
 }
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+nav li {
+  margin: 5px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #3a9d66;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
