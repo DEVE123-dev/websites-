@@ -1,63 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Cart.css">
-    <script src="cart&billing.js" defer></script>
-    <title>Cart and Billing - BOOK HAVEN</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Cart.css">
+  <script src="cart&billing.js" defer></script>
+  <title>Cart and Billing - BOOK HAVEN</title>
+  <style>
+    /* Responsive tweaks */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .cart-billing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .cart-container, .billing-container {
+      flex: 1 1 300px;
+      min-width: 280px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .cart-button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .billing-form input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    .error-message {
+      color: red;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .cart-billing-container {
+        flex-direction: column;
+      }
+
+      .cart-button {
+        width: 100%;
+      }
+    }
+
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    .back-home a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <h2>Cart and Billing Information</h2>
+  <h2>Cart and Billing Information</h2>
 
-    <div class="cart-billing-container">
-        <div class="cart-container">
-            <h3>Your Cart</h3>
-            <!-- Cart Table -->
-            <table id="cart-table">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-items">
-                    <!-- Cart items will be injected here dynamically -->
-                </tbody>
-            </table>
-            <button class="cart-button" onclick="window.location.href='Ourbooks.html'">Continue Shopping</button>
-        </div>
-
-        <div class="billing-container">
-            <h3>Billing Information</h3>
-            <form class="billing-form" id="billing-form">
-                <input type="text" id="fullname" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-                <input type="text" id="address" placeholder="Billing Address" required>
-                <input type="submit" value="Complete Purchase">
-                <button type="button" id="cancel-purchase" class="cart-button">Cancel Purchase</button>
-                <div class="error-message" id="error-message">Please fill in all fields!</div>
-            </form>
-        </div>
-        <div style="position: fixed; bottom: 20px; left: 20px;">
-  <a href="index.html" style="
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-  ">
-    ⬅ Back to Home
-  </a>
-</div>
-
+  <div class="cart-billing-container">
+    <div class="cart-container">
+      <h3>Your Cart</h3>
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Cart items will be injected here dynamically -->
+        </tbody>
+      </table>
+      <button class="cart-button" onclick="window.location.href='Ourbooks.html'">Continue Shopping</button>
     </div>
+
+    <div class="billing-container">
+      <h3>Billing Information</h3>
+      <form class="billing-form" id="billing-form">
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="address" placeholder="Billing Address" required>
+        <input type="submit" value="Complete Purchase">
+        <button type="button" id="cancel-purchase" class="cart-button">Cancel Purchase</button>
+        <div class="error-message" id="error-message">Please fill in all fields!</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="back-home">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
 </body>
 </html>
-
-
-
