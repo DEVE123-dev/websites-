@@ -167,3 +167,28 @@ ol.lower-roman { list-style-type: lower-roman; }
 ul.bullet { list-style-type: disc; color: #2e8b57; }
 ul.square { list-style-type: square; color: #2e8b57; }
 ul.circle { list-style-type: circle; color: #2e8b57
+           @media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+
