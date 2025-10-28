@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="BOOK HAVEN Logo">
+        </div>
+        <h2>BOOK HAVEN</h2>
+        <nav>
+            <ul>
+                <li><a href="About.US.html">About Us</a></li>
+                <li><a href="Ourbooks.html">Our books</a></li>
+                <li><a href="Best.seller.html">Best Sellers</a></li>
+                <li><a href="Cart&billing.html">Cart & Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="clearance-sale" class="clearance-sale">
+            <h2> Clearance Sale </h2>
+            <p>Discover amazing deals on books!📖</p>
+            <ol class="decimal">
+                <li>Great deals on fiction books</li>
+                <li>Discounts on non-fiction books</li>
+                <li>Special offers on Romance books</li>
+            </ol>
+        </section>
+        <section id="book-slideshow-section">
+            <h2>Thrills with Reacher!</h2>
+            <div id="book-slideshow">
+                <div class="slides">
+                    <div class="slide"><img src="images/61hours.jpeg" alt="Book 1"></div>
+                    <div class="slide"><img src="images/lee.child.chilling.floor.jpeg" alt="Book 2"></div>
+                    <div class="slide"><img src="images/lee.child.the.enemy.jpeg" alt="Book 3"></div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        <section id="contact-us" class="contact-us">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us anytime!</p>
+            <ul>
+                <li>Email: <a href="mailto:devesmash79@gmail.com">devesmash79@gmail.com</a></li>
+                <li>Phone: <a href="tel:+67571890262">+675 71890262</a></li>
+                <li>Address: abong, backroad lae city morobe province</li>
+                <li>Follow us on social media for updates!</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BOOK HAVEN. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook" aria-label="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="fab fa-twitter" aria-label="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin" aria-label="LinkedIn"></a>
+        </div>
+        <p>Benjamin Bino</p>
+    </footer>
+</body>
+</html>

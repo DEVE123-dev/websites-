@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cart.css">
+    <script src="cart&billing.js" defer></script>
+    <title>Cart and Billing - BOOK HAVEN</title>
+</head>
+<body>
+    <h2>Cart and Billing Information</h2>
+
+    <div class="cart-billing-container">
+        <div class="cart-container">
+            <h3>Your Cart</h3>
+            <!-- Cart Table -->
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be injected here dynamically -->
+                </tbody>
+            </table>
+            <button class="cart-button" onclick="window.location.href='Ourbooks.html'">Continue Shopping</button>
+        </div>
+
+        <div class="billing-container">
+            <h3>Billing Information</h3>
+            <form class="billing-form" id="billing-form">
+                <input type="text" id="fullname" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="address" placeholder="Billing Address" required>
+                <input type="submit" value="Complete Purchase">
+                <button type="button" id="cancel-purchase" class="cart-button">Cancel Purchase</button>
+                <div class="error-message" id="error-message">Please fill in all fields!</div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
