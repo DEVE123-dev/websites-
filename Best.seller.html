@@ -46,17 +46,22 @@
  <!-- PHP code moved to a separate file -->
  <h2>Have Questions? We got you.</h2>
 
- <form method="post" action="form-handler.php" id="questionForm">  
-     Name: <input type="text" name="name"><br><br>
-     E-mail: <input type="text" name="email"><br><br>
-     Phone number: <input type="number" name="contact_number"><br><br>
-    Question: <textarea name="question" rows="5" cols="40"></textarea><br><br>
-     Gender:
-     <input type="radio" name="gender" value="female">Female
-     <input type="radio" name="gender" value="male">Male
-     <input type="radio" name="gender" value="other">Other<br><br>
-     <input type="submit" name="submit" value="Submit">
- </form>
+<form method="POST" action="https://formsubmit.co/devesmash79@@email.com" id="questionForm">
+  <!-- Replace with your actual email above -->
+  
+  Name: <input type="text" name="name" required><br><br>
+  E-mail: <input type="email" name="email" required><br><br>
+  Phone number: <input type="tel" name="contact_number"><br><br>
+  Question: <textarea name="question" rows="5" cols="40" required></textarea><br><br>
+  
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other<br><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
  
  <p id="thankYouMessage" style="color: #2e8b57; display: none; font-weight: bold;"></p>
     </main>
@@ -72,3 +77,4 @@
 </body>
 
 </html>
+
